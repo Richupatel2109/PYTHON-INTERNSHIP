@@ -3,8 +3,11 @@
 {%block content%}
 
 <h1>welcome to my contactus page</h1>
-<form>
-Name : <input type='text' name='txt1'/> 
-</form>
+<form method="post" action="{% url 'process' %}">
+    {% csrf_token %}
+    No1 : <input type="number" name='txt1' required />
+    No2 : <input type="number" name='txt2' required />
+    <input type="submit"/>
+ </form>
 
 {%endblock %}

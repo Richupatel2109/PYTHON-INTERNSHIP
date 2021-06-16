@@ -13,3 +13,19 @@ def contactus(request):
 
 def myform(request):
     return render(request,'myform.html')
+
+def process(request):
+    print("Welcome")
+    print(request.method)
+    print(request.POST)
+    a = int(request.POST[ 'txt1' ])
+    b = int(request.POST[ 'txt2' ])
+    c = a + b
+    print(c)
+    context={
+        'aa':a,
+        'bb':b,
+        'mysum':c,
+    }
+
+    return render(request,'ans.html',context)
