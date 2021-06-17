@@ -18,14 +18,30 @@ def process(request):
     print("Welcome")
     print(request.method)
     print(request.POST)
-    a = int(request.POST[ 'txt1' ])
-    b = int(request.POST[ 'txt2' ])
-    c = a + b
-    print(c)
+    FirstName = request.POST[ 'txt1' ]
+    MiddleName = request.POST[ 'txt2' ]
+    LastName = request.POST[ 'txt3' ]
+    Collage = request.POST[ 'txt4' ]
+    Email = request.POST[ 'txt5' ]
+    Age = request.POST[ 'txt6' ]
+    Roll_No = request.POST[ 'txt7' ]
+    Branch = request.POST[ 'txt8']
+    Contact_No = request.POST[ 'txt9' ]
+    Country = request.POST[ 'txt10' ]
+    State = request.POST[ 'txt11' ]
+
     context={
-        'aa':a,
-        'bb':b,
-        'mysum':c,
+        'FirstName':FirstName,
+        'MiddleName':MiddleName,
+        'LastName':LastName,
+        'Collage':Collage,
+        'Email':Email,
+        'Age':Age,
+        'Roll_No':Roll_No,
+        'Branch':Branch,
+        'Contact_No':Contact_No,
+        'Country':Country,
+        'State':State,
     }
 
     return render(request,'ans.html',context)

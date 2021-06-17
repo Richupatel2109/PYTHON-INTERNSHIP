@@ -1,11 +1,22 @@
 <html>
+
 <body>
     <form method="post" action="{% url 'process' %}">
-    {% csrf_token %}
-    No1 : <input type="number" name='txt1' required />
-    No2 : <input type="number" name='txt2' required />
-    <input type="submit"/>
+        {% csrf_token %}
+        FirstName : <input type='text' name='txt1' required /></br>
+        MiddleName : <input type='text' name='txt2' required /></br>
+        LastName : <input type='text' name='txt3' required /></br>
+        College : <input type='text' name='txt4' rCollege /></br>
+        Email : <input type='text' name='txt5' required /></br>
+        Age : <input type='number' name='txt6' required /></br>
+        Roll_No : <input type='number' name='txt7' required /></br>
+        Branch : <input type='text' name='txt8' required /></br>
+        Contact_No : <input type='number' name='txt9' required /></br>
+        Country : <input type='text' name='txt10' required /></br>
+        State : <input type='text' name='txt11' required /></br>
+        <input type="submit" />
     </form>
- 
+
 </body>
+
 </html>
