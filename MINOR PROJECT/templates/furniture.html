@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section class="furniture_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Our Furniture
+        </h2>
+        <p>
+          which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't an
+        </p>
+      </div>
+      <div class="row">
+        {% if all_products %}
+          {% for prod in all_products %}
+          <div class="col-md-6 col-lg-4">
+              <div class="box">
+                <div class="img-box">
+                  <img src="{{prod.main_image.url}}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    {{prod.name}}
+                  </h5>
+                  <div class="price_box">
+                    <h6 class="price_heading">
+                      <span>&#8377;</span> {{prod.price}}
+                    </h6>
+                    <a href="">
+                      Buy Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        {% else %}
+          <div class="align-items-center">
+          <h2 class="bg-danger">No Products</h2>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <!-- end furniture section -->
+{% endblock content %}
